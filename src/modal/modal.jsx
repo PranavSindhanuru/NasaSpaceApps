@@ -1,4 +1,4 @@
-import { Edges, OrbitControls, PerspectiveCamera, Outlines, useTexture, Stars, PerformanceMonitor } from '@react-three/drei'
+import { Edges, OrbitControls, PerspectiveCamera, Outlines, useTexture, Stars, PerformanceMonitor, Loader } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { Suspense, useState, useRef, useEffect } from 'react'
 import { TextureLoader } from 'three'
@@ -7,7 +7,7 @@ import round from 'lodash/round'
 import Switch from '@mui/material/Switch';
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 
 import EarthDayMap from '../images/8k_earth_daymap.jpg'
 import EarthNightMap from '../images/8k_earth_nightmap.jpg'
@@ -20,6 +20,10 @@ import DroughtEconomicRisk from '../images/drought_economic_risk.png'
 import FloodFrequency from '../images/flood_frequency.png'
 import FloodMortalityRisk from '../images/flood_mortality_risk.png'
 import FloodEconomicRisk from '../images/flood_economic_risk.png'
+import CycloneFrquency from '../images/cyclone_frquency.png'
+import CycloneMortality from '../images/cyclone_mortality.png'
+import CycloneEconomic from '../images/cyclone_economic.png'
+
 
 
 import Earthquake from '../modules/earthquake'
@@ -34,6 +38,7 @@ const Modal = () => {
     const [page, setPage] = useState('Earthquake')
     const [droughtType, setDroughtType] = useState('DroughtMortalityRisk')
     const [floodType, setFloodType] = useState('FloodMortalityRisk')
+    const [cycloneType, setCycloneType] = useState('CycloneMortality')
     const [volcanoDataElement, setVolcanoDataElement] = useState()
     const [loading, isLoading] = useState(true)
     const [BCE, setBCE] = useState(true)
@@ -41,13 +46,13 @@ const Modal = () => {
 
     const [dpr, setDpr] = useState(2)
 
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            isLoading(false);
-        }, 3000);
+    // useEffect(() => {
+    //     const timeoutId = setTimeout(() => {
+    //         isLoading(false);
+    //     }, 3000);
 
-        return () => clearTimeout(timeoutId);
-    }, [])
+    //     return () => clearTimeout(timeoutId);
+    // }, [])
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -57,9 +62,10 @@ const Modal = () => {
                         <PerformanceMonitor factor={1} onChange={({ factor }) => setDpr(round(0.5 + 1.5 * factor, 1))} flipflops={3} onFallback={() => setDpr(1)} />
                         <OrbitControls target={[0, 0, 0]} maxPolarAngle={2} dampingFactor={0.1} rotateSpeed={0.5} />
                         <PerspectiveCamera makeDefault fov={50} position={[0, 0, 5.5]} />
-                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} BCE={BCE} CE={CE} droughtType={droughtType} floodType={floodType} />
+                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} BCE={BCE} CE={CE} droughtType={droughtType} floodType={floodType} cycloneType={cycloneType} isLoading={isLoading} />
                     </Canvas>
                 </Suspense>
+                <Loader />
                 {loading && <div className="absolute h-screen w-screen right-0 top-0 bg-[#FAFAFA] bg-opacity-25 flex justify-center items-center">
                     <div class="relative">
                         <div class="w-20 h-20 border-blue-200 border-2 rounded-full flex justify-center items-center text-[#FFFFFF]"> Loading </div>
@@ -68,10 +74,10 @@ const Modal = () => {
                 </div>}
                 {!loading &&
                     <div className="">
-                        {page === 'Earthquake' && <div className="absolute rounded right-0 top-0 h-fit w-[20vw] bg-[#FAFAFA] bg-opacity-25 p-5">
+                        {page === 'Earthquake' && <div className="absolute rounded right-0 top-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-5">
                             <div className="flex justify-between items-center text-[#FFFFFF] font-semibold">
-                                <div className="mr-2">Year: </div>
-                                <input className='bg-[#000000] w-full h-full p-2 outline-none rounded' type="number" min={1965} max={2016} value={year} onChange={(e) => setyear(e.target.value)} />
+                                <div className="mr-2 w-fit">{`Enter the year range (1965-2016): `}</div>
+                                <input className='bg-[#000000] w-fit h-full p-2 outline-none rounded' type="number" min={1965} max={2016} value={year} onChange={(e) => setyear(e.target.value)} />
                             </div>
                         </div>}
                         {page === 'Earthquake' && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
@@ -84,7 +90,7 @@ const Modal = () => {
                                 Click on each point for more information
                             </div>
                         </div>}
-                        {(page === 'Drought' || page === 'Flood') && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
+                        {(page === 'Drought' || page === 'Flood' || page === 'Cyclone') && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
                             <div className="text-[#FFFFFF] text-xs">
                                 Risk increases in direct correlation with the intensity of color
                             </div>
@@ -213,10 +219,42 @@ const Modal = () => {
                                 </Box>
                             </div>
                         </div>}
+                        {page === 'Cyclone' && <div className="absolute rounded right-0 top-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-5">
+                            <div className="font-semibold text-[#FFFFFF] flex justif-center items-center">Cyclone Risk Categories</div>
+                            <div className="mt-2 h-12 w-[15vw]">
+                                <Box style={{ outline: 'none', border: 'none' }}>
+                                    <Select
+                                        sx={{
+                                            color: "white",
+                                            '.MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '.MuiSvgIcon-root ': {
+                                                fill: "white",
+                                            }
+                                        }}
+                                        value={cycloneType}
+                                        onChange={(e) => setCycloneType(e.target.value)}
+                                        style={{ backgroundColor: 'black', color: 'white', width: '100%', outline: 'none', border: 'none' }}
+                                        IconProps
+                                    >
+                                        <MenuItem value={'CycloneMortality'}>Mortality Risk</MenuItem>
+                                        <MenuItem value={'CycloneEconomic'}>Economic Risk</MenuItem>
+                                        <MenuItem value={'CycloneFrquency'}>Frequency</MenuItem>
+                                    </Select>
+                                </Box>
+                            </div>
+                        </div>}
                         {page === 'Resources' && <div className="absolute z-0 left-0 top-0 w-full h-full bg-[#000000] bg-opacity-25">
                             <div className="relative h-full w-full">
                                 <div className="h-full w-full flex justify-center items-center text-[#FFFFFF]">
-                                    <div className="grid grid-rows-3 px-5 h-fit w-fit rounded divide-y border">
+                                    <div className="grid grid-rows-5 px-5 h-fit w-fit rounded divide-y border">
                                         <div className="py-5 grid grid-cols-3">
                                             <div className="">Earthquake </div>
                                             <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://www.kaggle.com/datasets/usgs/earthquake-database', '_blank')}>https://www.kaggle.com/datasets/usgs/earthquake-database</div>
@@ -227,6 +265,14 @@ const Modal = () => {
                                         </div>
                                         <div className="py-5 grid grid-cols-3">
                                             <div className="">Drought </div>
+                                            <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://worldview.earthdata.nasa.gov/', '_blank')}>https://worldview.earthdata.nasa.gov/</div>
+                                        </div>
+                                        <div className="py-5 grid grid-cols-3">
+                                            <div className="">Flood </div>
+                                            <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://worldview.earthdata.nasa.gov/', '_blank')}>https://worldview.earthdata.nasa.gov/</div>
+                                        </div>
+                                        <div className="py-5 grid grid-cols-3">
+                                            <div className="">Cyclone </div>
                                             <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://worldview.earthdata.nasa.gov/', '_blank')}>https://worldview.earthdata.nasa.gov/</div>
                                         </div>
                                     </div>
@@ -244,9 +290,10 @@ const Modal = () => {
 
 const Base = (props) => {
     // const [hover, setHover] = useState(false)
-    const [colorMap, normalMap, specularMap, cloudMap, droughtFreqMap, droughtMortalityRiskMap, droughtEconomicRiskMap, floodFrequencyMap, floodMortalityRiskMap, floodEconomicRiskMap] = useTexture([
-        EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap, DroughtFrequency, DroughtMortalityRisk, DroughtEconomicRisk, FloodFrequency, FloodMortalityRisk, FloodEconomicRisk
-    ])
+    const [colorMap, normalMap, specularMap, cloudMap, droughtFreqMap, droughtMortalityRiskMap, droughtEconomicRiskMap, floodFrequencyMap, floodMortalityRiskMap, floodEconomicRiskMap, cycloneFrquencyMap, cycloneMortalityMap, cycloneEconomicMap] = useTexture([
+        EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap, DroughtFrequency, DroughtMortalityRisk, DroughtEconomicRisk, FloodFrequency, FloodMortalityRisk, FloodEconomicRisk, CycloneFrquency, CycloneMortality, CycloneEconomic
+    ], () => { props.isLoading(false) })
+
     const globeRef = useRef();
 
     const handleGlobeClick = (e) => {
@@ -311,6 +358,22 @@ const Base = (props) => {
                     {props.floodType === 'FloodEconomicRisk' && <mesh position={[0, 0, 0]}>
                         <sphereGeometry args={[2, 64, 64]} />
                         <meshPhongMaterial map={floodEconomicRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                </>
+            }
+            {props?.page === 'Cyclone' &&
+                <>
+                    {props.cycloneType === 'CycloneFrquency' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={cycloneFrquencyMap} opacity={0.6} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.cycloneType === 'CycloneMortality' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={cycloneMortalityMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.cycloneType === 'CycloneEconomic' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={cycloneEconomicMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
                     </mesh>}
                 </>
             }
