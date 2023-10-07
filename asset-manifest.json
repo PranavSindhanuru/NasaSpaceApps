@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/NasaSpaceApps/static/css/main.c66afcd2.css",
+    "main.js": "/NasaSpaceApps/static/js/main.b0742ad0.js",
+    "static/media/8k_earth_clouds.jpg": "/NasaSpaceApps/static/media/8k_earth_clouds.08fcd80007fae8fc7170.jpg",
+    "static/media/8k_earth_daymap.jpg": "/NasaSpaceApps/static/media/8k_earth_daymap.35716a81a4ab4cb34ef8.jpg",
+    "static/media/8k_earth_nightmap.jpg": "/NasaSpaceApps/static/media/8k_earth_nightmap.c0e138e9bf380cafd2c2.jpg",
+    "static/media/8k_earth_normal_map.jpg": "/NasaSpaceApps/static/media/8k_earth_normal_map.fa6e17c5427998466fda.jpg",
+    "static/media/8k_earth_specular_map.jpg": "/NasaSpaceApps/static/media/8k_earth_specular_map.cd63e119aaf75158b44f.jpg",
+    "index.html": "/NasaSpaceApps/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.c66afcd2.css",
+    "static/js/main.b0742ad0.js"
+  ]
+}
