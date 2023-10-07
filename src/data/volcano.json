@@ -1,7 +1,7 @@
 [{
         "volcano_name": "Abu",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "6850BC",
+        "last_eruption_year": "6850BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -40,7 +40,7 @@
     {
         "volcano_name": "Acigol-Nevsehir",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "2080BC",
+        "last_eruption_year": "2080BCE",
         "country": "Turkey",
         "region": "Mediterranean and Western Asia",
         "subregion": "Turkey",
@@ -144,7 +144,7 @@
     {
         "volcano_name": "Aguilera",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1250BC",
+        "last_eruption_year": "1250BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Southern Chile and Argentina",
@@ -352,7 +352,7 @@
     {
         "volcano_name": "Aliso",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "2450BC",
+        "last_eruption_year": "2450BCE",
         "country": "Ecuador",
         "region": "South America",
         "subregion": "Ecuador",
@@ -417,7 +417,7 @@
     {
         "volcano_name": "Alutu",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "50BC",
+        "last_eruption_year": "50BCE",
         "country": "Ethiopia",
         "region": "Africa and Red Sea",
         "subregion": "Africa (northeastern) and Red Sea",
@@ -495,7 +495,7 @@
     {
         "volcano_name": "Ambitle",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "350BC",
+        "last_eruption_year": "350BCE",
         "country": "Papua New Guinea",
         "region": "Melanesia and Australia",
         "subregion": "New Ireland",
@@ -638,7 +638,7 @@
     {
         "volcano_name": "Antillanca Volcanic Complex",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "230BC",
+        "last_eruption_year": "230BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -703,7 +703,7 @@
     {
         "volcano_name": "Apagado",
         "primary_volcano_type": "Pyroclastic cone",
-        "last_eruption_year": "590BC",
+        "last_eruption_year": "590BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Southern Chile and Argentina",
@@ -755,7 +755,7 @@
     {
         "volcano_name": "Apoyeque",
         "primary_volcano_type": "Pyroclastic shield",
-        "last_eruption_year": "50BC",
+        "last_eruption_year": "50BCE",
         "country": "Nicaragua",
         "region": "México and Central America",
         "subregion": "Nicaragua",
@@ -989,7 +989,7 @@
     {
         "volcano_name": "Atacazo",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "320BC",
+        "last_eruption_year": "320BCE",
         "country": "Ecuador",
         "region": "South America",
         "subregion": "Ecuador",
@@ -1171,7 +1171,7 @@
     {
         "volcano_name": "Bachelor",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "5800BC",
+        "last_eruption_year": "5800BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -1197,7 +1197,7 @@
     {
         "volcano_name": "Bakening",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "550BC",
+        "last_eruption_year": "550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -1327,7 +1327,7 @@
     {
         "volcano_name": "Barkhatnaya Sopka",
         "primary_volcano_type": "Lava dome(s)",
-        "last_eruption_year": "3550BC",
+        "last_eruption_year": "3550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -1353,7 +1353,7 @@
     {
         "volcano_name": "Barva",
         "primary_volcano_type": "Complex",
-        "last_eruption_year": "6050BC",
+        "last_eruption_year": "6050BCE",
         "country": "Costa Rica",
         "region": "México and Central America",
         "subregion": "Costa Rica",
@@ -1444,7 +1444,7 @@
     {
         "volcano_name": "Berlin",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "8350BC",
+        "last_eruption_year": "8350BCE",
         "country": "Antarctica",
         "region": "Antarctica",
         "subregion": "Antarctica and South Sandwich Islands",
@@ -1548,7 +1548,7 @@
     {
         "volcano_name": "Black Butte Crater Lava Field",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "8400BC",
+        "last_eruption_year": "8400BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Idaho)",
@@ -1587,7 +1587,7 @@
     {
         "volcano_name": "Blanco, Cerro",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "2300BC",
+        "last_eruption_year": "2300BCE",
         "country": "Argentina",
         "region": "South America",
         "subregion": "Northern Chile, Bolivia and Argentina",
@@ -1639,7 +1639,7 @@
     {
         "volcano_name": "Bolshoi Semiachik",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "4450BC",
+        "last_eruption_year": "4450BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -1652,7 +1652,7 @@
     {
         "volcano_name": "Bolshoi-Kekuknaysky",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "5310BC",
+        "last_eruption_year": "5310BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -1704,7 +1704,7 @@
     {
         "volcano_name": "Bouvet",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "50BC",
+        "last_eruption_year": "50BCE",
         "country": "Norway",
         "region": "Atlantic Ocean",
         "subregion": "Atlantic Ocean (southern)",
@@ -1860,7 +1860,7 @@
     {
         "volcano_name": "Caburgua-Huelemolle",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "5050BC",
+        "last_eruption_year": "5050BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -1899,7 +1899,7 @@
     {
         "volcano_name": "Calatrava Volcanic Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "3600BC",
+        "last_eruption_year": "3600BCE",
         "country": "Spain",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Europe",
@@ -2029,7 +2029,7 @@
     {
         "volcano_name": "Carrizozo",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "3250BC",
+        "last_eruption_year": "3250BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (New Mexico)",
@@ -2068,7 +2068,7 @@
     {
         "volcano_name": "Cayutue-La Vigueria",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "190BC",
+        "last_eruption_year": "190BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Southern Chile and Argentina",
@@ -2159,7 +2159,7 @@
     {
         "volcano_name": "Chachimbiro",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "3740BC",
+        "last_eruption_year": "3740BCE",
         "country": "Ecuador",
         "region": "South America",
         "subregion": "Ecuador",
@@ -2172,7 +2172,7 @@
     {
         "volcano_name": "Chaine des Puys",
         "primary_volcano_type": "Lava dome(s)",
-        "last_eruption_year": "4040BC",
+        "last_eruption_year": "4040BCE",
         "country": "France",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Europe",
@@ -2198,7 +2198,7 @@
     {
         "volcano_name": "Cherpuk Group",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "4550BC",
+        "last_eruption_year": "4550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -2627,7 +2627,7 @@
     {
         "volcano_name": "Crater Lake",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "2850BC",
+        "last_eruption_year": "2850BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -2640,7 +2640,7 @@
     {
         "volcano_name": "Craters of the Moon",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "130BC",
+        "last_eruption_year": "130BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Idaho)",
@@ -2705,7 +2705,7 @@
     {
         "volcano_name": "Cumbres,  Las",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "3920BC",
+        "last_eruption_year": "3920BCE",
         "country": "Mexico",
         "region": "México and Central America",
         "subregion": "Mexico",
@@ -2770,7 +2770,7 @@
     {
         "volcano_name": "Damavand",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "5350BC",
+        "last_eruption_year": "5350BCE",
         "country": "Iran",
         "region": "Middle East and Indian Ocean",
         "subregion": "Middle East (western)",
@@ -2822,7 +2822,7 @@
     {
         "volcano_name": "Davis Lake",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "2790BC",
+        "last_eruption_year": "2790BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -2939,7 +2939,7 @@
     {
         "volcano_name": "Diamond Craters",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "5610BC",
+        "last_eruption_year": "5610BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -3108,7 +3108,7 @@
     {
         "volcano_name": "Edgecumbe",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "2220BC",
+        "last_eruption_year": "2220BCE",
         "country": "United States",
         "region": "Alaska",
         "subregion": "Alaska (eastern)",
@@ -3147,7 +3147,7 @@
     {
         "volcano_name": "Elovsky",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "7550BC",
+        "last_eruption_year": "7550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -3186,7 +3186,7 @@
     {
         "volcano_name": "Endeavour Segment",
         "primary_volcano_type": "Submarine",
-        "last_eruption_year": "3490BC",
+        "last_eruption_year": "3490BCE",
         "country": "Canada",
         "region": "Hawaii and Pacific Ocean",
         "subregion": "Pacific Ocean (northern)",
@@ -3212,7 +3212,7 @@
     {
         "volcano_name": "Erciyes Dagi",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "6880BC",
+        "last_eruption_year": "6880BCE",
         "country": "Turkey",
         "region": "Mediterranean and Western Asia",
         "subregion": "Turkey",
@@ -3407,7 +3407,7 @@
     {
         "volcano_name": "Flores",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "950BC",
+        "last_eruption_year": "950BCE",
         "country": "Portugal",
         "region": "Atlantic Ocean",
         "subregion": "Azores",
@@ -3433,7 +3433,7 @@
     {
         "volcano_name": "Fort Portal",
         "primary_volcano_type": "Tuff cone(s)",
-        "last_eruption_year": "2120BC",
+        "last_eruption_year": "2120BCE",
         "country": "Uganda",
         "region": "Africa and Red Sea",
         "subregion": "Africa (central)",
@@ -3472,7 +3472,7 @@
     {
         "volcano_name": "Fremrinamar",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1200BC",
+        "last_eruption_year": "1200BCE",
         "country": "Iceland",
         "region": "Iceland and Arctic Ocean",
         "subregion": "Iceland (northeastern)",
@@ -3537,7 +3537,7 @@
     {
         "volcano_name": "Fukue",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "400BC",
+        "last_eruption_year": "400BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Ryukyu Islands and Kyushu",
@@ -3654,7 +3654,7 @@
     {
         "volcano_name": "Gamchen",
         "primary_volcano_type": "Complex",
-        "last_eruption_year": "550BC",
+        "last_eruption_year": "550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -3680,7 +3680,7 @@
     {
         "volcano_name": "Garibaldi",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "8060BC",
+        "last_eruption_year": "8060BCE",
         "country": "Canada",
         "region": "Canada and Western USA",
         "subregion": "Canada",
@@ -3784,7 +3784,7 @@
     {
         "volcano_name": "Ghegham Volcanic Ridge",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "1900BC",
+        "last_eruption_year": "1900BCE",
         "country": "Armenia",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Asia",
@@ -3823,7 +3823,7 @@
     {
         "volcano_name": "Golden Trout Creek",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "5550BC",
+        "last_eruption_year": "5550BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (California)",
@@ -3862,7 +3862,7 @@
     {
         "volcano_name": "Graciosa",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1950BC",
+        "last_eruption_year": "1950BCE",
         "country": "Portugal",
         "region": "Atlantic Ocean",
         "subregion": "Azores",
@@ -3901,7 +3901,7 @@
     {
         "volcano_name": "Grimsnes",
         "primary_volcano_type": "Crater rows",
-        "last_eruption_year": "3500BC",
+        "last_eruption_year": "3500BCE",
         "country": "Iceland",
         "region": "Iceland and Arctic Ocean",
         "subregion": "Iceland (southwestern)",
@@ -4005,7 +4005,7 @@
     {
         "volcano_name": "Hachimantai",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "5350BC",
+        "last_eruption_year": "5350BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -4174,7 +4174,7 @@
     {
         "volcano_name": "Haylan, Jabal",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "1200BC",
+        "last_eruption_year": "1200BCE",
         "country": "Yemen",
         "region": "Middle East and Indian Ocean",
         "subregion": "Middle East (southern)",
@@ -4239,7 +4239,7 @@
     {
         "volcano_name": "Hell's Half Acre",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "3250BC",
+        "last_eruption_year": "3250BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Idaho)",
@@ -4356,7 +4356,7 @@
     {
         "volcano_name": "Hoodoo Mountain",
         "primary_volcano_type": "Subglacial",
-        "last_eruption_year": "7050BC",
+        "last_eruption_year": "7050BCE",
         "country": "Canada",
         "region": "Canada and Western USA",
         "subregion": "Canada",
@@ -4395,7 +4395,7 @@
     {
         "volcano_name": "Huambo",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "700BC",
+        "last_eruption_year": "700BCE",
         "country": "Peru",
         "region": "South America",
         "subregion": "Peru",
@@ -4434,7 +4434,7 @@
     {
         "volcano_name": "Hudson Mountains",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "210BC",
+        "last_eruption_year": "210BCE",
         "country": "Antarctica",
         "region": "Antarctica",
         "subregion": "Antarctica and South Sandwich Islands",
@@ -4499,7 +4499,7 @@
     {
         "volcano_name": "Humeros, Los",
         "primary_volcano_type": "Caldera(s)",
-        "last_eruption_year": "4470BC",
+        "last_eruption_year": "4470BCE",
         "country": "Mexico",
         "region": "México and Central America",
         "subregion": "Mexico",
@@ -4551,7 +4551,7 @@
     {
         "volcano_name": "Igwisi Hills",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "10450BC",
+        "last_eruption_year": "10450BCE",
         "country": "Tanzania",
         "region": "Africa and Red Sea",
         "subregion": "Africa (eastern)",
@@ -4681,7 +4681,7 @@
     {
         "volcano_name": "Imbabura",
         "primary_volcano_type": "Compound",
-        "last_eruption_year": "5550BC",
+        "last_eruption_year": "5550BCE",
         "country": "Ecuador",
         "region": "South America",
         "subregion": "Ecuador",
@@ -4707,7 +4707,7 @@
     {
         "volcano_name": "Indian Heaven",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "6250BC",
+        "last_eruption_year": "6250BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Washington)",
@@ -4720,7 +4720,7 @@
     {
         "volcano_name": "Infiernillo",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "6890BC",
+        "last_eruption_year": "6890BCE",
         "country": "Argentina",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -4746,7 +4746,7 @@
     {
         "volcano_name": "Inierie",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "8050BC",
+        "last_eruption_year": "8050BCE",
         "country": "Indonesia",
         "region": "Indonesia",
         "subregion": "Lesser Sunda Islands",
@@ -4824,7 +4824,7 @@
     {
         "volcano_name": "Isarog",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "3500BC",
+        "last_eruption_year": "3500BCE",
         "country": "Philippines",
         "region": "Philippines and SE Asia",
         "subregion": "Luzon",
@@ -4863,7 +4863,7 @@
     {
         "volcano_name": "Itasy Volcanic Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "6050BC",
+        "last_eruption_year": "6050BCE",
         "country": "Madagascar",
         "region": "Middle East and Indian Ocean",
         "subregion": "Indian Ocean (western)",
@@ -5084,7 +5084,7 @@
     {
         "volcano_name": "Jingbo",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "520BC",
+        "last_eruption_year": "520BCE",
         "country": "China",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "China (eastern)",
@@ -5097,7 +5097,7 @@
     {
         "volcano_name": "Jom-Bolok",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "5180BC",
+        "last_eruption_year": "5180BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Russia (southeastern)",
@@ -5110,7 +5110,7 @@
     {
         "volcano_name": "Jordan Craters",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "1250BC",
+        "last_eruption_year": "1250BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -5227,7 +5227,7 @@
     {
         "volcano_name": "Karisimbi",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "8050BC",
+        "last_eruption_year": "8050BCE",
         "country": "DR Congo-Rwanda",
         "region": "Africa and Red Sea",
         "subregion": "Africa (central)",
@@ -5318,7 +5318,7 @@
     {
         "volcano_name": "Kazbek",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "750BC",
+        "last_eruption_year": "750BCE",
         "country": "Georgia",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Asia",
@@ -5500,7 +5500,7 @@
     {
         "volcano_name": "Khodutka",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "300BC",
+        "last_eruption_year": "300BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -5916,7 +5916,7 @@
     {
         "volcano_name": "Kurile Lake",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "6440BC",
+        "last_eruption_year": "6440BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -6371,7 +6371,7 @@
     {
         "volcano_name": "Loloru",
         "primary_volcano_type": "Pyroclastic shield",
-        "last_eruption_year": "1050BC",
+        "last_eruption_year": "1050BCE",
         "country": "Papua New Guinea",
         "region": "Melanesia and Australia",
         "subregion": "Bougainville and Solomon Islands",
@@ -6462,7 +6462,7 @@
     {
         "volcano_name": "Macauley",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "4360BC",
+        "last_eruption_year": "4360BCE",
         "country": "New Zealand",
         "region": "New Zealand to Fiji",
         "subregion": "Kermadec Islands",
@@ -6475,7 +6475,7 @@
     {
         "volcano_name": "Madeira",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "4500BC",
+        "last_eruption_year": "4500BCE",
         "country": "Portugal",
         "region": "Atlantic Ocean",
         "subregion": "Azores",
@@ -6683,7 +6683,7 @@
     {
         "volcano_name": "Mariveles",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "2050BC",
+        "last_eruption_year": "2050BCE",
         "country": "Philippines",
         "region": "Philippines and SE Asia",
         "subregion": "Luzon",
@@ -6722,7 +6722,7 @@
     {
         "volcano_name": "Marra, Jebel",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "2000BC",
+        "last_eruption_year": "2000BCE",
         "country": "Sudan",
         "region": "Africa and Red Sea",
         "subregion": "Africa (northern)",
@@ -6839,7 +6839,7 @@
     {
         "volcano_name": "Maule, Laguna del",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "50BC",
+        "last_eruption_year": "50BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -6852,7 +6852,7 @@
     {
         "volcano_name": "Mauna Kea",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "2460BC",
+        "last_eruption_year": "2460BCE",
         "country": "United States",
         "region": "Hawaii and Pacific Ocean",
         "subregion": "Hawaiian Islands",
@@ -6878,7 +6878,7 @@
     {
         "volcano_name": "Mayor Island",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "5060BC",
+        "last_eruption_year": "5060BCE",
         "country": "New Zealand",
         "region": "New Zealand to Fiji",
         "subregion": "New Zealand",
@@ -6891,7 +6891,7 @@
     {
         "volcano_name": "Meager",
         "primary_volcano_type": "Complex",
-        "last_eruption_year": "410BC",
+        "last_eruption_year": "410BCE",
         "country": "Canada",
         "region": "Canada and Western USA",
         "subregion": "Canada",
@@ -6930,7 +6930,7 @@
     {
         "volcano_name": "Megata",
         "primary_volcano_type": "Maar(s)",
-        "last_eruption_year": "2050BC",
+        "last_eruption_year": "2050BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -6943,7 +6943,7 @@
     {
         "volcano_name": "Meidob Volcanic Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "2950BC",
+        "last_eruption_year": "2950BCE",
         "country": "Sudan",
         "region": "Africa and Red Sea",
         "subregion": "Africa (northern)",
@@ -7008,7 +7008,7 @@
     {
         "volcano_name": "Methana",
         "primary_volcano_type": "Lava dome(s)",
-        "last_eruption_year": "258BC",
+        "last_eruption_year": "258BCE",
         "country": "Greece",
         "region": "Mediterranean and Western Asia",
         "subregion": "Greece",
@@ -7060,7 +7060,7 @@
     {
         "volcano_name": "Mikurajima",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "4100BC",
+        "last_eruption_year": "4100BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Izu, Volcano, and Mariana Islands",
@@ -7164,7 +7164,7 @@
     {
         "volcano_name": "Moffett",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1600BC",
+        "last_eruption_year": "1600BCE",
         "country": "United States",
         "region": "Alaska",
         "subregion": "Aleutian Islands",
@@ -7333,7 +7333,7 @@
     {
         "volcano_name": "Muria",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "160BC",
+        "last_eruption_year": "160BCE",
         "country": "Indonesia",
         "region": "Indonesia",
         "subregion": "Java",
@@ -7372,7 +7372,7 @@
     {
         "volcano_name": "Myokosan",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "750BC",
+        "last_eruption_year": "750BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -7411,7 +7411,7 @@
     {
         "volcano_name": "Namarunu",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "6550BC",
+        "last_eruption_year": "6550BCE",
         "country": "Kenya",
         "region": "Africa and Red Sea",
         "subregion": "Africa (eastern)",
@@ -7424,7 +7424,7 @@
     {
         "volcano_name": "Nantaisan",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "9540BC",
+        "last_eruption_year": "9540BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -7437,7 +7437,7 @@
     {
         "volcano_name": "Naolinco Volcanic Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "1200BC",
+        "last_eruption_year": "1200BCE",
         "country": "Mexico",
         "region": "México and Central America",
         "subregion": "Mexico",
@@ -7567,7 +7567,7 @@
     {
         "volcano_name": "Newer Volcanics Province",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "2900BC",
+        "last_eruption_year": "2900BCE",
         "country": "Australia",
         "region": "Melanesia and Australia",
         "subregion": "Australia",
@@ -7632,7 +7632,7 @@
     {
         "volcano_name": "Niseko",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "4900BC",
+        "last_eruption_year": "4900BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Hokkaido",
@@ -7684,7 +7684,7 @@
     {
         "volcano_name": "Norikuradake",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "50BC",
+        "last_eruption_year": "50BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -7723,7 +7723,7 @@
     {
         "volcano_name": "Numazawa",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "3400BC",
+        "last_eruption_year": "3400BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -7801,7 +7801,7 @@
     {
         "volcano_name": "Nylgimelkin",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "3550BC",
+        "last_eruption_year": "3550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -7970,7 +7970,7 @@
     {
         "volcano_name": "Omanago Group",
         "primary_volcano_type": "Lava dome(s)",
-        "last_eruption_year": "3050BC",
+        "last_eruption_year": "3050BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -8139,7 +8139,7 @@
     {
         "volcano_name": "Paka",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "7550BC",
+        "last_eruption_year": "7550BCE",
         "country": "Kenya",
         "region": "Africa and Red Sea",
         "subregion": "Africa (eastern)",
@@ -8152,7 +8152,7 @@
     {
         "volcano_name": "Pali-Aike Volcanic Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "5550BC",
+        "last_eruption_year": "5550BCE",
         "country": "Chile-Argentina",
         "region": "South America",
         "subregion": "Southern Chile and Argentina",
@@ -8295,7 +8295,7 @@
     {
         "volcano_name": "Payun Matru",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "5050BC",
+        "last_eruption_year": "5050BCE",
         "country": "Argentina",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -8477,7 +8477,7 @@
     {
         "volcano_name": "Pleiades, The",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1050BC",
+        "last_eruption_year": "1050BCE",
         "country": "Antarctica",
         "region": "Antarctica",
         "subregion": "Antarctica and South Sandwich Islands",
@@ -8529,7 +8529,7 @@
     {
         "volcano_name": "Popa",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "442BC",
+        "last_eruption_year": "442BCE",
         "country": "Burma (Myanmar)",
         "region": "Philippines and SE Asia",
         "subregion": "Southeast Asia",
@@ -8555,7 +8555,7 @@
     {
         "volcano_name": "Porak",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "778BC",
+        "last_eruption_year": "778BCE",
         "country": "Armenia-Azerbaijan",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Asia",
@@ -8581,7 +8581,7 @@
     {
         "volcano_name": "Prestahnukur",
         "primary_volcano_type": "Subglacial",
-        "last_eruption_year": "3350BC",
+        "last_eruption_year": "3350BCE",
         "country": "Iceland",
         "region": "Iceland and Arctic Ocean",
         "subregion": "Iceland (southwestern)",
@@ -8737,7 +8737,7 @@
     {
         "volcano_name": "Quimsachata",
         "primary_volcano_type": "Lava dome",
-        "last_eruption_year": "4450BC",
+        "last_eruption_year": "4450BCE",
         "country": "Peru",
         "region": "South America",
         "subregion": "Peru",
@@ -8893,7 +8893,7 @@
     {
         "volcano_name": "Red Hill",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "9450BC",
+        "last_eruption_year": "9450BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (New Mexico)",
@@ -9348,7 +9348,7 @@
     {
         "volcano_name": "Sand Mountain Field",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "950BC",
+        "last_eruption_year": "950BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Oregon)",
@@ -9426,7 +9426,7 @@
     {
         "volcano_name": "Santa Isabel",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "850BC",
+        "last_eruption_year": "850BCE",
         "country": "Colombia",
         "region": "South America",
         "subregion": "Colombia",
@@ -9699,7 +9699,7 @@
     {
         "volcano_name": "Severny",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "1550BC",
+        "last_eruption_year": "1550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -9803,7 +9803,7 @@
     {
         "volcano_name": "Silali",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "5050BC",
+        "last_eruption_year": "5050BCE",
         "country": "Kenya",
         "region": "Africa and Red Sea",
         "subregion": "Africa (eastern)",
@@ -10141,7 +10141,7 @@
     {
         "volcano_name": "St. Paul Island",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "1280BC",
+        "last_eruption_year": "1280BCE",
         "country": "United States",
         "region": "Alaska",
         "subregion": "Alaska (western)",
@@ -10310,7 +10310,7 @@
     {
         "volcano_name": "Taapaca",
         "primary_volcano_type": "Complex",
-        "last_eruption_year": "320BC",
+        "last_eruption_year": "320BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Northern Chile, Bolivia and Argentina",
@@ -10414,7 +10414,7 @@
     {
         "volcano_name": "Takaharayama",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "4570BC",
+        "last_eruption_year": "4570BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Honshu",
@@ -10427,7 +10427,7 @@
     {
         "volcano_name": "Takahe",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "5550BC",
+        "last_eruption_year": "5550BCE",
         "country": "Antarctica",
         "region": "Antarctica",
         "subregion": "Antarctica and South Sandwich Islands",
@@ -10583,7 +10583,7 @@
     {
         "volcano_name": "Taryatu-Chulutu",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "2980BC",
+        "last_eruption_year": "2980BCE",
         "country": "Mongolia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Mongolia",
@@ -10661,7 +10661,7 @@
     {
         "volcano_name": "Tecuamburro",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "960BC",
+        "last_eruption_year": "960BCE",
         "country": "Guatemala",
         "region": "México and Central America",
         "subregion": "Guatemala",
@@ -10739,7 +10739,7 @@
     {
         "volcano_name": "Tengchong",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "5750BC",
+        "last_eruption_year": "5750BCE",
         "country": "China",
         "region": "Philippines and SE Asia",
         "subregion": "Southeast Asia",
@@ -10804,7 +10804,7 @@
     {
         "volcano_name": "Theistareykir",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "900BC",
+        "last_eruption_year": "900BCE",
         "country": "Iceland",
         "region": "Iceland and Arctic Ocean",
         "subregion": "Iceland (northeastern)",
@@ -10921,7 +10921,7 @@
     {
         "volcano_name": "Titila",
         "primary_volcano_type": "Shield(s)",
-        "last_eruption_year": "550BC",
+        "last_eruption_year": "550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -11051,7 +11051,7 @@
     {
         "volcano_name": "Tolhuaca",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "4000BC",
+        "last_eruption_year": "4000BCE",
         "country": "Chile",
         "region": "South America",
         "subregion": "Central Chile and Argentina",
@@ -11090,7 +11090,7 @@
     {
         "volcano_name": "Toluca, Nevado de",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1350BC",
+        "last_eruption_year": "1350BCE",
         "country": "Mexico",
         "region": "México and Central America",
         "subregion": "Mexico",
@@ -11181,7 +11181,7 @@
     {
         "volcano_name": "Toshima",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "4550BC",
+        "last_eruption_year": "4550BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Izu, Volcano, and Mariana Islands",
@@ -11467,7 +11467,7 @@
     {
         "volcano_name": "Ubehebe Craters",
         "primary_volcano_type": "Maar(s)",
-        "last_eruption_year": "150BC",
+        "last_eruption_year": "150BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (California)",
@@ -11493,7 +11493,7 @@
     {
         "volcano_name": "Udokan Plateau",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "220BC",
+        "last_eruption_year": "220BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Russia (southeastern)",
@@ -11558,7 +11558,7 @@
     {
         "volcano_name": "Ulreung",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "2990BC",
+        "last_eruption_year": "2990BCE",
         "country": "South Korea",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Korea",
@@ -11714,7 +11714,7 @@
     {
         "volcano_name": "Vaiyots-Sar",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "2000BC",
+        "last_eruption_year": "2000BCE",
         "country": "Armenia",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Asia",
@@ -11818,7 +11818,7 @@
     {
         "volcano_name": "Vilyuchik",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "8050BC",
+        "last_eruption_year": "8050BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -11909,7 +11909,7 @@
     {
         "volcano_name": "Vulsini",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "104BC",
+        "last_eruption_year": "104BCE",
         "country": "Italy",
         "region": "Mediterranean and Western Asia",
         "subregion": "Italy",
@@ -11922,7 +11922,7 @@
     {
         "volcano_name": "Vysoky",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "550BC",
+        "last_eruption_year": "550BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -11961,7 +11961,7 @@
     {
         "volcano_name": "Wapi Lava Field",
         "primary_volcano_type": "Shield",
-        "last_eruption_year": "300BC",
+        "last_eruption_year": "300BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Idaho)",
@@ -12013,7 +12013,7 @@
     {
         "volcano_name": "West Crater",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "5750BC",
+        "last_eruption_year": "5750BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Washington)",
@@ -12026,7 +12026,7 @@
     {
         "volcano_name": "West Eifel Volcanic Field",
         "primary_volcano_type": "Maar(s)",
-        "last_eruption_year": "8300BC",
+        "last_eruption_year": "8300BCE",
         "country": "Germany",
         "region": "Mediterranean and Western Asia",
         "subregion": "Western Europe",
@@ -12182,7 +12182,7 @@
     {
         "volcano_name": "Yavinsky",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "4050BC",
+        "last_eruption_year": "4050BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -12195,7 +12195,7 @@
     {
         "volcano_name": "Yellowstone",
         "primary_volcano_type": "Caldera(s)",
-        "last_eruption_year": "1350BC",
+        "last_eruption_year": "1350BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (Wyoming)",
@@ -12247,7 +12247,7 @@
     {
         "volcano_name": "Yonemaru-Sumiyoshiike",
         "primary_volcano_type": "Maar(s)",
-        "last_eruption_year": "6200BC",
+        "last_eruption_year": "6200BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Ryukyu Islands and Kyushu",
@@ -12260,7 +12260,7 @@
     {
         "volcano_name": "Yoteizan",
         "primary_volcano_type": "Stratovolcano",
-        "last_eruption_year": "1050BC",
+        "last_eruption_year": "1050BCE",
         "country": "Japan",
         "region": "Japan, Taiwan, Marianas",
         "subregion": "Hokkaido",
@@ -12273,7 +12273,7 @@
     {
         "volcano_name": "Yucamane",
         "primary_volcano_type": "Stratovolcano(es)",
-        "last_eruption_year": "1320BC",
+        "last_eruption_year": "1320BCE",
         "country": "Peru",
         "region": "South America",
         "subregion": "Peru",
@@ -12364,7 +12364,7 @@
     {
         "volcano_name": "Zavaritsky",
         "primary_volcano_type": "Pyroclastic cone(s)",
-        "last_eruption_year": "800BC",
+        "last_eruption_year": "800BCE",
         "country": "Russia",
         "region": "Kamchatka and Mainland Asia",
         "subregion": "Kamchatka Peninsula",
@@ -12403,7 +12403,7 @@
     {
         "volcano_name": "Zitacuaro-Valle de Bravo",
         "primary_volcano_type": "Caldera",
-        "last_eruption_year": "3050BC",
+        "last_eruption_year": "3050BCE",
         "country": "Mexico",
         "region": "México and Central America",
         "subregion": "Mexico",
@@ -12442,7 +12442,7 @@
     {
         "volcano_name": "Zuni-Bandera",
         "primary_volcano_type": "Volcanic field",
-        "last_eruption_year": "1170BC",
+        "last_eruption_year": "1170BCE",
         "country": "United States",
         "region": "Canada and Western USA",
         "subregion": "USA (New Mexico)",

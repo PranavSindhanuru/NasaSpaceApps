@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import * as THREE from 'three'
 
+import { Edges, Sphere } from '@react-three/drei'
+
 import data from '../data/nasa_earthquake_database.json'
 
 const Earthquake = (props) => {
@@ -24,15 +26,20 @@ const Earthquake = (props) => {
 
     const longitudeOffset = 180;
 
-    const redDotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.7 });
+    // const redDotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.7 });
 
     const redDots = displayData.map((item) => {
         const modifiedLongitude = item.Longitude - longitudeOffset;
         const position = coordinatesToPosition(modifiedLongitude, item.Latitude, 2);
         return (
             <mesh key={`${item.longitude}-${item.latitude}`} position={position}>
-                <sphereGeometry args={[item.Magnitude / 200, 8, 8]} />
-                <primitive object={redDotMaterial} />
+                <mesh>
+                    <Sphere args={[item.Magnitude / 200, 8, 8]}>
+                        <meshStandardMaterial color='#FF0000' transparent opacity={0.7} />
+                    </Sphere>
+                </mesh>
+                {/* <sphereGeometry args={[item.Magnitude / 200, 8, 8]} />
+                <primitive object={redDotMaterial} /> */}
             </mesh>
         );
     });

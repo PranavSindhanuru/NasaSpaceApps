@@ -2,20 +2,27 @@ import { useState, useEffect } from 'react'
 import * as THREE from 'three'
 
 import data from '../data/volcano.json'
-import { Edges } from '@react-three/drei'
+import { Edges, Sphere } from '@react-three/drei'
 
 const Volcano = (props) => {
-
     const [displayData, setDisplayData] = useState([])
 
     useEffect(() => {
-        setDisplayData([...data])
+        var tempBCE = []
+        var tempCE = []
+        if (props.BCE) {
+            tempBCE = [...data].filter((item) => typeof item.last_eruption_year !== 'number')
+        }
+        if (props.CE) {
+            tempCE = [...data].filter((item) => typeof item.last_eruption_year === 'number')
+        }
+        setDisplayData([...tempBCE, ...tempCE])
         // setDisplayData([
         //     { longitude: 131, latitude: 34 }, // japan
         //     { longitude: 77, latitude: 14 }, // bengalore
         //     { longitude: -74, latitude: 40 } // new york
         // ])
-    }, [])
+    }, [props.BCE, props.CE])
 
     const redDots = displayData.map((item) => {
         return <Dots item={item} setVolcanoDataElement={props.setVolcanoDataElement} />
@@ -43,7 +50,7 @@ const Dots = (props) => {
 
     const longitudeOffset = 180;
 
-    const redDotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.7 });
+    // const redDotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.7 });
 
     const [hover, setHover] = useState(false)
     const modifiedLongitude = props.item.longitude - longitudeOffset;
@@ -53,13 +60,18 @@ const Dots = (props) => {
             onClick={() => { props.setVolcanoDataElement(props.item) }}
             onPointerEnter={() => setHover(true)}
             onPointerLeave={() => setHover(false)}>
-            <sphereGeometry args={[0.02, 1, 1]} />
-            <primitive object={redDotMaterial} />
-            {hover && <Edges
-                scale={1.1}
-                threshold={15}
-                color="white"
-            />}
+            <mesh>
+                <Sphere args={[0.02, 4, 4]}>
+                    <meshStandardMaterial color='#FF0000' transparent opacity={0.7} />
+                    {hover && <Edges
+                        scale={1.1}
+                        threshold={1}
+                        color="white"
+                    />}
+                </Sphere>
+            </mesh>
+            {/* <sphereGeometry args={[0.02, 1, 1]} />
+            <primitive object={redDotMaterial} /> */}
         </mesh>
     );
 }

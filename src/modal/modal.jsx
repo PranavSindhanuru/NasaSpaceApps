@@ -1,14 +1,22 @@
-import { Edges, OrbitControls, PerspectiveCamera, Outlines, useTexture, Stars } from '@react-three/drei'
+import { Edges, OrbitControls, PerspectiveCamera, Outlines, useTexture, Stars, PerformanceMonitor } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { Suspense, useState, useRef, useEffect } from 'react'
 import { TextureLoader } from 'three'
 import * as THREE from 'three'
+import round from 'lodash/round'
+import Switch from '@mui/material/Switch';
+import Box from "@mui/material/Box";
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 import EarthDayMap from '../images/8k_earth_daymap.jpg'
 import EarthNightMap from '../images/8k_earth_nightmap.jpg'
 import EarthNormalMap from '../images/8k_earth_normal_map.jpg'
 import EarthCloudMap from '../images/8k_earth_clouds.jpg'
 import EarthSpecularMap from '../images/8k_earth_specular_map.jpg'
+import DroughtFrequency from '../images/drought_frequency.png'
+import DroughtMortalityRisk from '../images/drought_mortality_risk.png'
+import DroughtEconomicRisk from '../images/drought_economic_risk.png'
 
 import Earthquake from '../modules/earthquake'
 import NavBar from '../components/navbar'
@@ -20,8 +28,13 @@ const Modal = () => {
     const [latitude, setLatitude] = useState('')
     const [longitude, setLongitude] = useState('')
     const [page, setPage] = useState('Earthquake')
+    const [droughtType, setDroughtType] = useState('DroughtFrequency')
     const [volcanoDataElement, setVolcanoDataElement] = useState({})
     const [loading, isLoading] = useState(true)
+    const [BCE, setBCE] = useState(true)
+    const [CE, setCE] = useState(true)
+
+    const [dpr, setDpr] = useState(2)
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -29,16 +42,17 @@ const Modal = () => {
         }, 3000);
 
         return () => clearTimeout(timeoutId);
-    }, []);
+    }, [])
 
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="h-[100vh] w-[100vw] bg-[#010101] relative flex">
-                <Suspense fallback={console.log('done')}>
-                    <Canvas shadows>
-                        <OrbitControls target={[0, 0, 0]} maxPolarAngle={2} />
+                <Suspense fallback={null}>
+                    <Canvas shadows={{ enabled: true, type: 'pcfsoft' }} frameloop="demand" dpr={dpr}>
+                        <PerformanceMonitor factor={1} onChange={({ factor }) => setDpr(round(0.5 + 1.5 * factor, 1))} flipflops={3} onFallback={() => setDpr(1)} />
+                        <OrbitControls target={[0, 0, 0]} maxPolarAngle={2} dampingFactor={0.1} rotateSpeed={0.5} />
                         <PerspectiveCamera makeDefault fov={50} position={[0, 0, 5.5]} />
-                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} />
+                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} BCE={BCE} CE={CE} droughtType={droughtType} />
                     </Canvas>
                 </Suspense>
                 {loading && <div className="absolute h-screen w-screen right-0 top-0 bg-[#FAFAFA] bg-opacity-25 flex justify-center items-center">
@@ -63,6 +77,11 @@ const Modal = () => {
                         {page === 'Volcano' && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
                             <div className="text-[#FFFFFF] text-xs">
                                 Click on each point for more information
+                            </div>
+                        </div>}
+                        {page === 'Drought' && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
+                            <div className="text-[#FFFFFF] text-xs">
+                                Risk increases in direct correlation with the intensity of color
                             </div>
                         </div>}
                         {page === 'Volcano' && volcanoDataElement?.volcano_name && <div className="absolute rounded right-0 top-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-5">
@@ -101,15 +120,85 @@ const Modal = () => {
                                 </div>
                             </div>
                         </div>}
-                        <div className="absolute rounded left-[35vw] bottom-0 justify-self-center h-[5vh] w-[30vw] bg-[#FAFAFA] bg-opacity-25">
-                            <div className="flex justify-around w-full h-[5vh] items-center text-[#FFFFFF] p-2">
-                                <div className="">{`Latitude: ${latitude}`}</div>
-                                <div className="">{`Longitude: ${longitude}`}</div>
+                        {page !== 'Resources' &&
+                            <div className="">
+                                <div className="absolute rounded left-[35vw] bottom-0 justify-self-center h-[5vh] w-[30vw] bg-[#FAFAFA] bg-opacity-25 z-10">
+                                    <div className="flex justify-around w-full h-[5vh] items-center text-[#FFFFFF] p-2">
+                                        <div className="">{`Latitude: ${latitude}`}</div>
+                                        <div className="">{`Longitude: ${longitude}`}</div>
+                                    </div>
+                                </div>
+                                <div className="absolute left-0 top-0 h-full w-[15vw]">
+                                    <NavBar setPage={setPage} page={page} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="absolute left-0 top-0 h-full w-[15vw]">
-                            <NavBar setPage={setPage} page={page} />
-                        </div>
+                        }
+                        {page === 'Volcano' && <div className="absolute rounded right-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-3 text-[#FFFFFF]">
+                            <div className="font-semibold flex justif-center items-center"> Last Eruption </div>
+                            <div className="flex justify-between items-center mt-3">
+                                <div className="mr-3">BCE</div>
+                                <Switch defaultChecked color="default" onChange={() => setBCE(!BCE)} />
+                            </div>
+                            <div className="flex justify-between items-center mt-3">
+                                <div className="mr-3">CE</div>
+                                <Switch defaultChecked color="default" onChange={() => setCE(!CE)} />
+                            </div>
+                        </div>}
+                        {page === 'Drought' && <div className="absolute rounded right-0 top-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-5">
+                            <div className="font-semibold text-[#FFFFFF] flex justif-center items-center">Drought Risk Categories</div>
+                            <div className="mt-2 h-12 w-[15vw]">
+                                <Box style={{ outline: 'none', border: 'none' }}>
+                                    <Select
+                                        sx={{
+                                            color: "white",
+                                            '.MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '.MuiSvgIcon-root ': {
+                                                fill: "white",
+                                            }
+                                        }}
+                                        value={droughtType}
+                                        onChange={(e) => setDroughtType(e.target.value)}
+                                        style={{ backgroundColor: 'black', color: 'white', width: '100%', outline: 'none', border: 'none' }}
+                                        IconProps
+                                    >
+                                        <MenuItem value={'DroughtFrequency'}>Frequency</MenuItem>
+                                        <MenuItem value={'DroughtMortalityRisk'}>Mortality Risk</MenuItem>
+                                        <MenuItem value={'DroughtEconomicRisk'}>Economic Risk</MenuItem>
+                                    </Select>
+                                </Box>
+                            </div>
+                        </div>}
+                        {page === 'Resources' && <div className="absolute z-0 left-0 top-0 w-full h-full bg-[#000000] bg-opacity-25">
+                            <div className="relative h-full w-full">
+                                <div className="h-full w-full flex justify-center items-center text-[#FFFFFF]">
+                                    <div className="grid grid-rows-3 px-5 h-fit w-fit rounded divide-y border">
+                                        <div className="py-5 grid grid-cols-3">
+                                            <div className="">Earthquake </div>
+                                            <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://www.kaggle.com/datasets/usgs/earthquake-database', '_blank')}>https://www.kaggle.com/datasets/usgs/earthquake-database</div>
+                                        </div>
+                                        <div className="py-5 grid grid-cols-3">
+                                            <div className="">Volcano </div>
+                                            <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://www.kaggle.com/datasets/jessemostipak/volcano-eruptions', '_blank')}>https://www.kaggle.com/datasets/jessemostipak/volcano-eruptions</div>
+                                        </div>
+                                        <div className="py-5 grid grid-cols-3">
+                                            <div className="">Drought </div>
+                                            <div className="col-span-2 cursor-pointer underline text-[#84BCDA]" onClick={() => window.open('https://worldview.earthdata.nasa.gov/', '_blank')}>https://worldview.earthdata.nasa.gov/</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="absolute left-0 top-0 h-full w-[15vw]">
+                                    <NavBar setPage={setPage} page={page} />
+                                </div>
+                            </div>
+                        </div>}
                     </div>}
             </div>
         </div>
@@ -118,7 +207,9 @@ const Modal = () => {
 
 const Base = (props) => {
     // const [hover, setHover] = useState(false)
-    const [colorMap, normalMap, specularMap, cloudMap] = useTexture([EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap])
+    const [colorMap, normalMap, specularMap, cloudMap, droughtFreqMap, droughtMortalityRiskMap, droughtEconomicRiskMap] = useTexture([
+        EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap, DroughtFrequency, DroughtMortalityRisk, DroughtEconomicRisk
+    ])
     const globeRef = useRef();
 
     const handleGlobeClick = (e) => {
@@ -154,7 +245,23 @@ const Base = (props) => {
         <>
             <ambientLight intensity={2} />
             <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-            <mesh>
+            {props?.page === 'Drought' &&
+                <>
+                    {props.droughtType === 'DroughtFrequency' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={droughtFreqMap} opacity={0.7} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.droughtType === 'DroughtMortalityRisk' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={droughtMortalityRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.droughtType === 'DroughtEconomicRisk' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={droughtEconomicRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                </>
+            }
+            <mesh position={[0, 0, 0]}>
                 <sphereGeometry args={[2, 64, 64]} />
                 <meshPhongMaterial map={cloudMap} opacity={0.4} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
             </mesh>
@@ -172,7 +279,7 @@ const Base = (props) => {
                 <meshPhongMaterial specularMap={specularMap} map={colorMap} />
                 <meshStandardMaterial map={colorMap} normalMap={normalMap} />
                 {props.page === 'Earthquake' && <Earthquake year={props.year} />}
-                {props.page === 'Volcano' && <Volcano setVolcanoDataElement={props.setVolcanoDataElement} />}
+                {props.page === 'Volcano' && <Volcano setVolcanoDataElement={props.setVolcanoDataElement} BCE={props.BCE} CE={props.CE} />}
             </mesh>
         </>
     )
