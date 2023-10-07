@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NasaSpaceApps/static/css/main.3b67fb07.css",
-    "main.js": "/NasaSpaceApps/static/js/main.4a509da4.js",
+    "main.css": "/NasaSpaceApps/static/css/main.dcbde7bf.css",
+    "main.js": "/NasaSpaceApps/static/js/main.e6193778.js",
     "static/media/8k_earth_clouds.jpg": "/NasaSpaceApps/static/media/8k_earth_clouds.08fcd80007fae8fc7170.jpg",
     "static/media/8k_earth_daymap.jpg": "/NasaSpaceApps/static/media/8k_earth_daymap.35716a81a4ab4cb34ef8.jpg",
     "static/media/8k_earth_nightmap.jpg": "/NasaSpaceApps/static/media/8k_earth_nightmap.c0e138e9bf380cafd2c2.jpg",
@@ -13,7 +13,7 @@
     "index.html": "/NasaSpaceApps/index.html"
   },
   "entrypoints": [
-    "static/css/main.3b67fb07.css",
-    "static/js/main.4a509da4.js"
+    "static/css/main.dcbde7bf.css",
+    "static/js/main.e6193778.js"
   ]
 }
