@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/NasaSpaceApps/static/css/main.274644e7.css",
-    "main.js": "/NasaSpaceApps/static/js/main.37156c5c.js",
+    "main.css": "/NasaSpaceApps/static/css/main.3b67fb07.css",
+    "main.js": "/NasaSpaceApps/static/js/main.4a509da4.js",
     "static/media/8k_earth_clouds.jpg": "/NasaSpaceApps/static/media/8k_earth_clouds.08fcd80007fae8fc7170.jpg",
     "static/media/8k_earth_daymap.jpg": "/NasaSpaceApps/static/media/8k_earth_daymap.35716a81a4ab4cb34ef8.jpg",
     "static/media/8k_earth_nightmap.jpg": "/NasaSpaceApps/static/media/8k_earth_nightmap.c0e138e9bf380cafd2c2.jpg",
     "static/media/8k_earth_normal_map.jpg": "/NasaSpaceApps/static/media/8k_earth_normal_map.fa6e17c5427998466fda.jpg",
     "static/media/8k_earth_specular_map.jpg": "/NasaSpaceApps/static/media/8k_earth_specular_map.cd63e119aaf75158b44f.jpg",
+    "static/media/drought_economic_risk.png": "/NasaSpaceApps/static/media/drought_economic_risk.5331f9efc9d3a69b70e5.png",
+    "static/media/drought_mortality_risk.png": "/NasaSpaceApps/static/media/drought_mortality_risk.d9c01574a5341130b8c7.png",
+    "static/media/drought_frequency.png": "/NasaSpaceApps/static/media/drought_frequency.05c2834fd2814768efcc.png",
     "index.html": "/NasaSpaceApps/index.html"
   },
   "entrypoints": [
-    "static/css/main.274644e7.css",
-    "static/js/main.37156c5c.js"
+    "static/css/main.3b67fb07.css",
+    "static/js/main.4a509da4.js"
   ]
 }
