@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { GiEarthCrack, GiHotSurface } from "react-icons/gi";
+import { GiEarthCrack, GiHotSurface, GiFlood } from "react-icons/gi";
 import { FaVolcano } from "react-icons/fa6";
 
 const NavBar = (props) => {
@@ -53,6 +53,12 @@ const NavBar = (props) => {
                             <GiHotSurface className="h-6 w-6" />
                         </div>
                         <div className="">Drought</div>
+                    </div>
+                    <div className="flex items-center cursor-pointer hover:text-[#84BCDA] transition-all" onClick={() => { props.setPage('Flood'); setExpand(false) }}>
+                        <div className="mx-2">
+                            <GiFlood className="h-6 w-6" />
+                        </div>
+                        <div className="">Flood</div>
                     </div>
                 </div>
                 <div className="absolute bottom-0 left-0 mb-10 w-full px-2 font-normal flex items-center justify-center cursor-pointer hover:text-[#84BCDA] transition-all" onClick={() => { props.setPage('Resources'); setExpand(false) }}>Resources</div>

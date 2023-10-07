@@ -17,6 +17,10 @@ import EarthSpecularMap from '../images/8k_earth_specular_map.jpg'
 import DroughtFrequency from '../images/drought_frequency.png'
 import DroughtMortalityRisk from '../images/drought_mortality_risk.png'
 import DroughtEconomicRisk from '../images/drought_economic_risk.png'
+import FloodFrequency from '../images/flood_frequency.png'
+import FloodMortalityRisk from '../images/flood_mortality_risk.png'
+import FloodEconomicRisk from '../images/flood_economic_risk.png'
+
 
 import Earthquake from '../modules/earthquake'
 import NavBar from '../components/navbar'
@@ -28,8 +32,9 @@ const Modal = () => {
     const [latitude, setLatitude] = useState('')
     const [longitude, setLongitude] = useState('')
     const [page, setPage] = useState('Earthquake')
-    const [droughtType, setDroughtType] = useState('DroughtFrequency')
-    const [volcanoDataElement, setVolcanoDataElement] = useState({})
+    const [droughtType, setDroughtType] = useState('DroughtMortalityRisk')
+    const [floodType, setFloodType] = useState('FloodMortalityRisk')
+    const [volcanoDataElement, setVolcanoDataElement] = useState()
     const [loading, isLoading] = useState(true)
     const [BCE, setBCE] = useState(true)
     const [CE, setCE] = useState(true)
@@ -52,7 +57,7 @@ const Modal = () => {
                         <PerformanceMonitor factor={1} onChange={({ factor }) => setDpr(round(0.5 + 1.5 * factor, 1))} flipflops={3} onFallback={() => setDpr(1)} />
                         <OrbitControls target={[0, 0, 0]} maxPolarAngle={2} dampingFactor={0.1} rotateSpeed={0.5} />
                         <PerspectiveCamera makeDefault fov={50} position={[0, 0, 5.5]} />
-                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} BCE={BCE} CE={CE} droughtType={droughtType} />
+                        <Base page={page} year={year} setLatitude={setLatitude} setLongitude={setLongitude} setVolcanoDataElement={setVolcanoDataElement} BCE={BCE} CE={CE} droughtType={droughtType} floodType={floodType} />
                     </Canvas>
                 </Suspense>
                 {loading && <div className="absolute h-screen w-screen right-0 top-0 bg-[#FAFAFA] bg-opacity-25 flex justify-center items-center">
@@ -79,7 +84,7 @@ const Modal = () => {
                                 Click on each point for more information
                             </div>
                         </div>}
-                        {page === 'Drought' && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
+                        {(page === 'Drought' || page === 'Flood') && <div className="absolute rounded left-0 bottom-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-2">
                             <div className="text-[#FFFFFF] text-xs">
                                 Risk increases in direct correlation with the intensity of color
                             </div>
@@ -169,9 +174,41 @@ const Modal = () => {
                                         style={{ backgroundColor: 'black', color: 'white', width: '100%', outline: 'none', border: 'none' }}
                                         IconProps
                                     >
-                                        <MenuItem value={'DroughtFrequency'}>Frequency</MenuItem>
                                         <MenuItem value={'DroughtMortalityRisk'}>Mortality Risk</MenuItem>
                                         <MenuItem value={'DroughtEconomicRisk'}>Economic Risk</MenuItem>
+                                        <MenuItem value={'DroughtFrequency'}>Frequency</MenuItem>
+                                    </Select>
+                                </Box>
+                            </div>
+                        </div>}
+                        {page === 'Flood' && <div className="absolute rounded right-0 top-0 h-fit w-fit bg-[#FAFAFA] bg-opacity-25 p-5">
+                            <div className="font-semibold text-[#FFFFFF] flex justif-center items-center">Flood Risk Categories</div>
+                            <div className="mt-2 h-12 w-[15vw]">
+                                <Box style={{ outline: 'none', border: 'none' }}>
+                                    <Select
+                                        sx={{
+                                            color: "white",
+                                            '.MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '&:hover .MuiOutlinedInput-notchedOutline': {
+                                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                                            },
+                                            '.MuiSvgIcon-root ': {
+                                                fill: "white",
+                                            }
+                                        }}
+                                        value={floodType}
+                                        onChange={(e) => setFloodType(e.target.value)}
+                                        style={{ backgroundColor: 'black', color: 'white', width: '100%', outline: 'none', border: 'none' }}
+                                        IconProps
+                                    >
+                                        <MenuItem value={'FloodMortalityRisk'}>Mortality Risk</MenuItem>
+                                        <MenuItem value={'FloodEconomicRisk'}>Economic Risk</MenuItem>
+                                        <MenuItem value={'FloodFrequency'}>Frequency</MenuItem>
                                     </Select>
                                 </Box>
                             </div>
@@ -207,8 +244,8 @@ const Modal = () => {
 
 const Base = (props) => {
     // const [hover, setHover] = useState(false)
-    const [colorMap, normalMap, specularMap, cloudMap, droughtFreqMap, droughtMortalityRiskMap, droughtEconomicRiskMap] = useTexture([
-        EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap, DroughtFrequency, DroughtMortalityRisk, DroughtEconomicRisk
+    const [colorMap, normalMap, specularMap, cloudMap, droughtFreqMap, droughtMortalityRiskMap, droughtEconomicRiskMap, floodFrequencyMap, floodMortalityRiskMap, floodEconomicRiskMap] = useTexture([
+        EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudMap, DroughtFrequency, DroughtMortalityRisk, DroughtEconomicRisk, FloodFrequency, FloodMortalityRisk, FloodEconomicRisk
     ])
     const globeRef = useRef();
 
@@ -249,7 +286,7 @@ const Base = (props) => {
                 <>
                     {props.droughtType === 'DroughtFrequency' && <mesh position={[0, 0, 0]}>
                         <sphereGeometry args={[2, 64, 64]} />
-                        <meshPhongMaterial map={droughtFreqMap} opacity={0.7} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                        <meshPhongMaterial map={droughtFreqMap} opacity={0.6} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
                     </mesh>}
                     {props.droughtType === 'DroughtMortalityRisk' && <mesh position={[0, 0, 0]}>
                         <sphereGeometry args={[2, 64, 64]} />
@@ -258,6 +295,22 @@ const Base = (props) => {
                     {props.droughtType === 'DroughtEconomicRisk' && <mesh position={[0, 0, 0]}>
                         <sphereGeometry args={[2, 64, 64]} />
                         <meshPhongMaterial map={droughtEconomicRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                </>
+            }
+            {props?.page === 'Flood' &&
+                <>
+                    {props.floodType === 'FloodFrequency' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={floodFrequencyMap} opacity={0.6} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.floodType === 'FloodMortalityRisk' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={floodMortalityRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+                    </mesh>}
+                    {props.floodType === 'FloodEconomicRisk' && <mesh position={[0, 0, 0]}>
+                        <sphereGeometry args={[2, 64, 64]} />
+                        <meshPhongMaterial map={floodEconomicRiskMap} opacity={0.9} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
                     </mesh>}
                 </>
             }
