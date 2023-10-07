@@ -1,6 +1,7 @@
 {
-    "name": "exp2",
-    "version": "0.1.0",
+    "homepage": "http://PranavSindhanuru.github.io/NasaSpaceApps",
+    "name": "Nasa Space Apps Challenge",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.11.1",
@@ -21,6 +22,8 @@
     },
     "scripts": {
         "start": "react-scripts start --no-warnings",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
@@ -44,6 +47,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "^6.0.0",
         "source-map-loader": "^4.0.1",
         "tailwindcss": "^3.3.3"
     }
